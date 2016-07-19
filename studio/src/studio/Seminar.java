@@ -9,7 +9,7 @@ public class Seminar {
 	private String _location;
 	private int _seatsLeft = 10;
 	private Course _course;
-	private ArrayList<Enrollment> _studentList = new ArrayList<Enrollment>();
+	private ArrayList<Student> _studentList = new ArrayList<Student>();
 	
 	public Seminar(String seminarName, String location, Course course) {
 		_course = course;
@@ -36,14 +36,14 @@ public class Seminar {
 	public String getStudentList() {
 		 String lista = new String("");
 		if (_studentList.isEmpty()) return "Nessuno studente";
-		for (Enrollment enrollment : _studentList) {
-			lista = lista+enrollment.getInfo()+ " ";
+		for (Student stud : _studentList) {
+			lista = lista+stud.getInfo()+ " ";
 		}
 		return lista;
 	}
 
 	public void addStudent(Student student) {
-		_studentList.add(new Enrollment(student));
+		_studentList.add(student);
 		}
 
 }

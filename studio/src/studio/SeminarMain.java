@@ -1,6 +1,6 @@
 package studio;
 
-public class SeminarDetails {
+public class SeminarMain {
 
 	public static void main(String[] args) {
 		
