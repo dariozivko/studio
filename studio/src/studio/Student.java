@@ -9,8 +9,16 @@ public class Student {
 		_name = name;
 		_lastname = lastname;
 	}
+	
+	public String getName() {
+		return _name;
+	}
+	
+	public String getLastname() {
+		return _lastname;
+	}
 
-	private String getFullName() {
+	public String getFullName() {
 		return _name + " " + _lastname;
 	}
 

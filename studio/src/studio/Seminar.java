@@ -1,6 +1,7 @@
 package studio;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class Seminar {
@@ -21,6 +22,10 @@ public class Seminar {
 		return _seminarName;
 	}
 	
+	public Course getCourse(){
+		return _course;
+	}
+	
 	public String getDescription(){
 		return _course.getDescription();
 	}
@@ -33,13 +38,8 @@ public class Seminar {
 		return _seatsLeft;
 	}
 
-	public String getStudentList() {
-		 String lista = new String("");
-		if (_studentList.isEmpty()) return "Nessuno studente";
-		for (Student stud : _studentList) {
-			lista = lista+stud.getInfo()+ " ";
-		}
-		return lista;
+	public List<Student> getStudentList() {
+		return _studentList;
 	}
 
 	public void addStudent(Student student) {
